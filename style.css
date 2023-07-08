@@ -1,0 +1,170 @@
+/* css variable */
+:root{
+    --clr-primary-100: hsl(225, 100%, 94%);
+    --clr-secondary-500: hsl(245, 75%, 52%);
+
+    --clr-neutral-100: hsl(225, 100%, 98%);
+    --clr-neutral-500: hsl(224, 23%, 55%);
+    --clr-neutral-600:hsla(222, 47%, 20%, 0.6);
+    --clr-neutral-700:hsl(223, 47%, 23%);
+
+    --ff: 'Red Hat Display', sans-serif;
+    --fw-normal: 500;
+    --fw-bold: 700;
+    --fw-extra-bold: 900;
+}
+
+
+/* css reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,body{
+    height: 100%;
+}
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+
+.flex-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* general style */
+
+body{
+    justify-content: center;
+    font-family: var(--ff);
+    font-size: 0.925rem;
+    font-weight: var(--fw-normal);
+    background-color: #D6E1FF;
+    background-image: url("./images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    padding: 5% 5%;
+}
+@media (min-width:500px) {
+    body{
+        background-color: #E0E8FF;
+        background-image: url("./images/pattern-background-desktop.svg");
+        background-repeat: no-repeat;
+    }
+    main{
+        gap:3rem;
+    }
+    
+}
+
+main{
+    gap: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    max-width: 450px;
+}
+picture img{
+    border-radius: 1rem 1rem 0 0;
+}
+
+h1{
+    font-size:1.5rem;
+    font-weight: var(--fw-extra-bold);
+    color: var(--clr-neutral-700);
+}
+
+main > div{
+    gap: 2rem;
+    padding: 0px 2rem;
+    color: var(--clr-neutral-600);
+    
+
+}
+.grid-group{
+    display: grid;
+    grid-template-columns: 70px 3fr 1fr;
+    align-items: center;
+}
+.detail{
+    width: 100%;
+    justify-content: flex-start;
+    flex-direction: row;
+    background-color: var(--clr-neutral-100);
+    border-radius: .7rem;
+    padding: 1rem;
+}
+
+
+.price{
+    justify-self: left;
+}
+
+.price h2{
+    font-size: 0.925rem;
+    color: var(--clr-neutral-700);
+    font-weight: var(--fw-bold);
+}
+
+/* .price::before{
+    display: block;
+    content: "";
+    width: 48px;
+    height: 48px;
+    background-image: url("images/icon-music.svg");
+} */
+
+
+button{
+    width: 100%;
+    color: white;
+    background-color: var(--clr-secondary-500);
+    border: none;
+    border-radius: 1rem;
+    padding: 0.75rem;
+    box-shadow: 0px 10px 10px hsla(273, 41%, 16%, 0.172);
+}
+button:hover{
+    background-color: rgba(104, 7, 104, 0.416);
+}
+
+.footer{
+    font-weight: var(--fw-bold);
+}
+.footer:hover{
+    color: black;
+}
+
+a{
+    font-weight: var(--fw-extra-bold);
+    font-size: 0.8rem;
+    justify-self: flex-end;
+}
+
+a:hover{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-secondary-500);
+}
